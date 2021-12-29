@@ -22,13 +22,13 @@ def get_pass(number):
 a = st.slider('Pick a lengh', 4, 20, value=6)
 st.write('Pass lengh:', a)
 
-col1, col2, col3 = st.columns(3)
+col1, col2, col3 = st.beta_columns(3)
 click = col1.button('Get password')
 copy = None
 if click:
         col2.subheader(get_pass(a))
         copy = col3.button('Copy')
-elif copy:
+if copy:
         st.write('Copied')
 
 #st.text('Fixed width text')
